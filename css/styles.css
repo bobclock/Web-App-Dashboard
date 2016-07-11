@@ -4,6 +4,11 @@ body {
   background-color: #fff;
   color: #535353;
   text-align: center;
+  position: relative;
+}
+
+h1 {
+  display: inline;
 }
 
 .left {
@@ -56,21 +61,7 @@ header ul li a {
 
 /*NAV STYLES*/
 
-nav {
-  background-color: #3c395e;
-  width: 5%;
-}
 
-.horizontal {
-  margin: 0;
-  padding: 0;
-}
-
-.horizontal li {
-  display: block;
-  float: left;
-  padding: 0 10px;
-}
 
 /*SEARCH BAR STYLES*/
 
@@ -84,7 +75,7 @@ nav {
 
 /*WIDGETS STYLES*/
 
-.secondary_content {
+.main_content {
  border: solid 1px #c8c8c8;
 }
 
@@ -104,5 +95,71 @@ nav {
   body {
     background-color: #fff;
   }
+
+  /*NAV STYLES*/
+
+  nav {
+    background-color: #3c395e;
+    width: 8%;
+    position: absolute;
+    bottom: 0;
+    top: 75px;
+    min-height: 100%;
+  }
+
+  .nav_icon {
+    width: 50%;
+    margin: 20px 10px;
+    text-align: center;
+  }
+
+  .horizontal {
+    margin: 0;
+    padding: 0;
+  }
+
+  .horizontal li {
+    display: block;
+    float: left;
+    padding: 0 10px;
+  }
+
+  /*CONTENT STYLES*/
+
+  .main_content {
+    width: 92%;
+    margin-left: 8%;
+  }
+
+  .half {
+    display: inline-block;
+    width: 50%;
+    margin: 0 -0.2%;
+  }
+
+  #recent_activity,
+  #new_members,
+  #daily_traffic,
+  #mobile_users,
+  #traffic,
+  #social_stats {
+    border-bottom: solid 1px #c8c8c8;
+  }
+
+  #recent_activity,
+  #mobile_users,
+  #settings {
+    border-left: solid 1px #c8c8c8;
+  }
+
+  .social {
+    display: inline-block;
+    width: 25%;
+    margin: auto;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    border: solid 1px #c8c8c8;
+  }
+
 
 }
