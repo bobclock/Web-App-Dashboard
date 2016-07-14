@@ -56,14 +56,24 @@
 
       <div id="traffic" class="full secondary_content">
         <h2>Traffic</h2>
+        <button id="hourly" class="">Hourly</button>
+        <button id="daily" class="">Daily</button>
+        <button id="weekly" class="selected">Weekly</button>
+        <button id="monthly" class="">Monthly</button>
+        <canvas id="traffic_chart_hourly" class="wide_canvas"></canvas>
+        <canvas id="traffic_chart_daily" class="wide_canvas"></canvas>
+        <canvas id="traffic_chart_monthly" class="wide_canvas"></canvas>
+        <canvas id="traffic_chart_weekly" class="wide_canvas"></canvas>
       </div>
 
       <div id="daily_traffic" class="half secondary_content">
         <h2>Daily Traffic</h2>
+        <canvas id="traffic_chart_daily2" class="half_canvas"></canvas>
       </div>
 
       <div id="mobile_users" class="half secondary_content">
         <h2>Mobile Users</h2>
+        <canvas id="mobile_users_chart" class="half_canvas"></canvas>
       </div>
 
       <div id="social_stats" class="full secondary_content">
@@ -108,6 +118,8 @@
 
     <!-- Script tags -->
     <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/app.js"></script>
 
 
   </body>

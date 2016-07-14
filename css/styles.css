@@ -23,41 +23,13 @@ h1 {
   clear: both;
 }
 
+.selected {
+  background-color: red;
+}
+
 /*HEADER STYLES*/
 
-header {
-  background-color: #6060b1;
-  height: 75px;
-}
 
-header ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-header ul li a {
-  text-decoration: none;
-}
-
-.head {
-  display: inline-block;
-  width: 7%;
-  color: white;
-  margin: 10px 0;
-  padding: 20px 0;
-  line-height: 15px;
-  text-align: center;
-}
-
-#dashboard_nav {
-  padding-left: 10px;
-}
-
-#notification_nav {
-  padding-left: 70%;
-  border-right: solid 1px black;
-}
 
 /*NAV STYLES*/
 
@@ -81,6 +53,8 @@ header ul li a {
 
 
 
+
+/*Bigger than portrait on phones*/
 @media (min-width: 321px) {
 
   body {
@@ -90,10 +64,51 @@ header ul li a {
 
 }
 
-@media (min-width: 1072px) {
+/*Tablet landscape*/
+@media (min-width: 768px) {
 
   body {
-    background-color: #fff;
+    background-color: green;
+  }
+
+  /*HEADER STYLES*/
+
+  header {
+    background-color: #6060b1;
+    height: 75px;
+  }
+
+  header ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  header ul li a {
+    text-decoration: none;
+  }
+
+  .head {
+    display: inline-block;
+    width: 10%;
+    color: white;
+    margin: 10px 0;
+    padding: 20px 0;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  #dashboard_nav {
+    padding-left: 1%;
+  }
+
+  #profile_nav {
+    padding-left: 2%;
+  }
+
+  #notification_nav {
+    padding-left: 65%;
+    border-right: solid 1px black;
   }
 
   /*NAV STYLES*/
@@ -123,6 +138,20 @@ header ul li a {
     float: left;
     padding: 0 10px;
   }
+
+}
+
+/*Desktop*/
+@media (min-width: 1072px) {
+
+  body {
+    background-color: #fff;
+  }
+
+
+  /*HEADER STYLES*/
+
+
 
   /*CONTENT STYLES*/
 
