@@ -226,9 +226,9 @@ var pie_data = {
         }]
 };
 
-var ctx = document.getElementById("mobile_users_chart");
+var pie_chart = document.getElementById("mobile_users_chart");
 
-   new Chart(ctx,{
+   new Chart(pie_chart,{
     type: 'doughnut',
     data: pie_data,
     animation:{
