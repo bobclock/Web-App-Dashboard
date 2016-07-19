@@ -215,6 +215,8 @@ h3 {
 table {
   border: 1px solid black;
   border-collapse: collapse;
+  margin: 0 auto;
+  width: 96%;
 }
 
 td {
@@ -333,7 +335,7 @@ td {
 
   .full_title {
     width: 90%;
-    margin: 10px;
+    margin: 2%;
     text-align: left;
   }
 
