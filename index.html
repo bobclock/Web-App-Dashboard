@@ -1,138 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Web App Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="main_header">
       <h1 class="web_title">
         <a href="">
         WebAppTM
         </a>
       </h1>
-      <ul class="main_nav">
-        <li>
-          <a id="notification_nav" class="" href="">Notifcation</a> <!--link -->
-        </li>
-        <li>
-          <a id="profile_nav" class="" href="">Profile Pic</a>  <!--link-->
-        </li>
-        <li>
-          <a id="name_nav" class="" href="">Name</a> <!--link -->
-        </li>
-      </ul>
+        <ul class="main_nav">
+            <li>
+                <a id="notification_nav" class="" href="">Notifcation</a>
+                <!--link -->
+            </li>
+            <li>
+                <a id="profile_nav" class="" href="">Profile Pic</a>
+                <!--link-->
+            </li>
+            <li>
+                <a id="name_nav" class="" href="">Name</a>
+                <!--link -->
+            </li>
+        </ul>
     </header>
 
     <div class="main_page">
 
 
-      <ul class="side_nav">
-        <li id="dashboard">
-          <img class="nav_icon" src="icons/icon-dashboard.svg"/>
-        </li>
-        <li id="members_nav">
-          <img class="nav_icon" src="icons/icon-members.svg"/>
-        </li>
-        <li id="visits_nav">
-          <img class="nav_icon" src="icons/icon-visits.svg"/>
-        </li>
-        <li id="settings_nav">
-          <img class="nav_icon" src="icons/icon-settings.svg"/>
-        </li>
-      </ul>
+        <ul class="side_nav">
+            <li id="dashboard">
+                <img class="nav_icon" src="icons/icon-dashboard.svg" />
+            </li>
+            <li id="members_nav">
+                <img class="nav_icon" src="icons/icon-members.svg" />
+            </li>
+            <li id="visits_nav">
+                <img class="nav_icon" src="icons/icon-visits.svg" />
+            </li>
+            <li id="settings_nav">
+                <img class="nav_icon" src="icons/icon-settings.svg" />
+            </li>
+        </ul>
 
 
-    <div class="main_content">
+        <div class="main_content">
 
-      <div id="search_holder">
-        <h2 id="dash">Dashboard</h2>
-        <div id="search_div">
-          <input id="search" type="text" placeholder="Search" />
-        </div>
-      </div>
+            <div id="search_holder">
+                <h2 id="dash">Dashboard</h2>
+                <div id="search_div">
+                    <label for="search_dashboard"></label>
+                    <input id="search_dashboard" class="search" type="text" placeholder="Search" />
+                </div>
+            </div>
 
-      <div id="alert">
-        Some text here
-        <span id="close">x</span>
-      </div>
+            <div id="alert">
+                Some text here
+                <span id="close">x</span>
+            </div>
 
-      <div id="traffic" class="full secondary_content">
-        <div class="traffic_top">
-          <div>
-            <h2>Traffic</h2>
-          </div>
-          <div class="button_holder">
-          <button id="hourly" class="traffic_button">Hourly</button>
-          <button id="daily" class="traffic_button">Daily</button>
-          <button id="weekly" class="traffic_button selected">Weekly</button>
-          <button id="monthly" class="traffic_button">Monthly</button>
-          </div>
-        </div>
-        <canvas id="traffic_chart_hourly" class="wide_canvas"></canvas>
-        <canvas id="traffic_chart_daily" class="wide_canvas"></canvas>
-        <canvas id="traffic_chart_monthly" class="wide_canvas"></canvas>
-        <canvas id="traffic_chart_weekly" class="wide_canvas"></canvas>
-      </div>
+            <div id="traffic" class="full secondary_content widget">
+                <div class="traffic_top">
+                    <div>
+                        <h2>Traffic</h2>
+                    </div>
+                    <div class="button_holder">
+                        <button id="hourly" class="traffic_button">Hourly</button>
+                        <button id="daily" class="traffic_button">Daily</button>
+                        <button id="weekly" class="traffic_button selected">Weekly</button>
+                        <button id="monthly" class="traffic_button">Monthly</button>
+                    </div>
+                </div>
+                <canvas id="traffic_chart_hourly" class="wide_canvas"></canvas>
+                <canvas id="traffic_chart_daily" class="wide_canvas"></canvas>
+                <canvas id="traffic_chart_monthly" class="wide_canvas"></canvas>
+                <canvas id="traffic_chart_weekly" class="wide_canvas"></canvas>
+            </div>
 
-      <div id="daily_and_mobile" class="half_content">
+            <div id="daily_and_mobile" class="half_content">
 
-        <div id="daily_traffic" class="half secondary_content">
-          <h2 class="full_title">Daily Traffic</h2>
-          <canvas id="traffic_chart_daily2" class="half_canvas"></canvas>
-        </div>
+                <div id="daily_traffic" class="half secondary_content widget">
+                    <h2 class="full_title">Daily Traffic</h2>
+                    <canvas id="traffic_chart_daily2" class="half_canvas"></canvas>
+                </div>
 
-        <div id="mobile_users" class="half secondary_content">
-          <h2 class="full_title">Mobile Users</h2>
-          <canvas id="mobile_users_chart" class="half_canvas"></canvas>
-        </div>
+                <div id="mobile_users" class="half secondary_content widget">
+                    <h2 class="full_title">Mobile Users</h2>
+                    <canvas id="mobile_users_chart" class="half_canvas"></canvas>
+                </div>
 
-      </div>
+            </div>
 
-      <div id="social_stats" class="full secondary_content">
-        <h2 class="full_title">Social Stats</h2>
-        <div id="twitter" class="social">
-          <div class="logo_holder">
+            <div id="social_stats" class="full secondary_content widget">
+                <h2 class="full_title full_width">Social Stats</h2>
+                <div id="twitter" class="social">
+                    <div class="logo_holder">
 
-            <svg class="social_logo" version="1.1" id="twitter_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            	 viewbox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-              <path  d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"/>
-            </svg>
-          </div>
-          <div class="statistics">
-            <h3>
-              Twitter
-            </h3>
-            <p>
-              10,345
-            </p>
-          </div>
-        </div>
-        <div id="facebook" class="social">
-          <div class="logo_holder">
+                        <svg class="social_logo" version="1.1" id="twitter_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                            <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="statistics">
+                        <h3>
+                          Twitter
+                        </h3>
+                        <p>
+                            10,345
+                        </p>
+                    </div>
+                </div>
+                <div id="facebook" class="social">
+                    <div class="logo_holder">
 
-            <svg class="social_logo" enable-background="new 0 0 56.693 56.693" id="facebook_logo" version="1.1" viewbox="0 0 56.693 56.693" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
-            </svg>
-          </div>
-          <div class="statistics">
-            <h3>
-              Facebook
-            </h3>
-            <p>
-              8,739
-            </p>
-          </div>
-        </div>
-        <div id="google_plus" class="social">
-          <div class="logo_holder">
-            <svg class="social_logo" version="1.1" id="gplus_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            	 viewbox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-            <path d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
+                        <svg class="social_logo" enable-background="new 0 0 56.693 56.693" id="facebook_logo" version="1.1" viewbox="0 0 56.693 56.693" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z" />
+                        </svg>
+                    </div>
+                    <div class="statistics">
+                        <h3>
+                        Facebook
+                      </h3>
+                        <p>
+                            8,739
+                        </p>
+                    </div>
+                </div>
+                <div id="google_plus" class="social">
+                    <div class="logo_holder">
+                        <svg class="social_logo" version="1.1" id="gplus_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                            <path d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
             	c-0.1-0.2-0.3-0.3-0.5-0.6c-0.2-0.2-0.4-0.4-0.5-0.5c-0.1-0.1-0.3-0.3-0.6-0.5c-0.3-0.2-0.5-0.4-0.6-0.4s-0.3-0.2-0.6-0.4
             	c-0.3-0.2-0.5-0.4-0.6-0.4c-0.2,0-0.5,0-1,0c-0.7,0-1.4,0-2,0.1c-0.7,0.1-1.4,0.2-2.1,0.5c-0.7,0.2-1.3,0.5-1.9,0.9s-1,0.8-1.3,1.4
             	c-0.3,0.6-0.5,1.3-0.5,2.1c0,0.9,0.2,1.7,0.7,2.3c0.5,0.7,1.1,1.2,1.8,1.6s1.5,0.7,2.3,0.9s1.6,0.3,2.4,0.3c0.8,0,1.5-0.1,2.2-0.2
@@ -147,217 +151,340 @@
             	c0.4-0.8,1-1.5,1.8-2.1c0.8-0.6,1.8-1.1,2.8-1.4c1-0.3,2-0.5,3-0.7c0.9-0.1,1.9-0.2,2.9-0.3c-0.8-1.1-1.2-2-1.2-2.9
             	c0-0.2,0-0.3,0-0.5c0-0.1,0.1-0.3,0.1-0.4c0-0.1,0.1-0.2,0.2-0.4c0.1-0.2,0.1-0.3,0.1-0.4c-0.5,0.1-1,0.1-1.3,0.1
             	c-1.9,0-3.5-0.6-4.9-1.9c-1.4-1.3-2-2.8-2-4.7c0-1.8,0.6-3.4,1.8-4.8C6,1.7,7.5,0.8,9.3,0.4C10.5,0.1,11.7,0,12.9,0z M32.8,4.9v2.5
-            	h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9H32.8z"/>
-            </svg>
-          </div>
-          <div class="statistics">
-            <h3>
-              Google+
-            </h3>
-            <p>
-              2,530
-            </p>
-          </div>
+            	h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9H32.8z" />
+                        </svg>
+                    </div>
+                    <div class="statistics">
+                        <h3>
+                          Google+
+                        </h3>
+                        <p>
+                            2,530
+                        </p>
+                    </div>
+
+                </div>
+                <div id="pinterest" class="social">
+                    <div class="logo_holder">
+
+                        <svg class="social_logo" version="1.1" id="pinterest_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+
+                            <path d="M16 0c-8.825 0-16 7.175-16 16s7.175 16 16 16 16-7.175 16-16-7.175-16-16-16zM16 29.863c-1.431 0-2.806-0.219-4.106-0.619 0.563-0.919 1.412-2.431 1.725-3.631 0.169-0.65 0.863-3.294 0.863-3.294 0.45 0.863 1.775 1.594 3.175 1.594 4.181 0 7.194-3.844 7.194-8.625 0-4.581-3.738-8.006-8.544-8.006-5.981 0-9.156 4.019-9.156 8.387 0 2.031 1.081 4.563 2.813 5.369 0.262 0.125 0.4 0.069 0.463-0.188 0.044-0.194 0.281-1.131 0.387-1.575 0.031-0.137 0.019-0.262-0.094-0.4-0.575-0.694-1.031-1.975-1.031-3.162 0-3.056 2.313-6.019 6.256-6.019 3.406 0 5.788 2.319 5.788 5.637 0 3.75-1.894 6.35-4.356 6.35-1.363 0-2.381-1.125-2.050-2.506 0.394-1.65 1.15-3.425 1.15-4.613 0-1.063-0.569-1.95-1.756-1.95-1.394 0-2.506 1.438-2.506 3.369 0 1.225 0.412 2.056 0.412 2.056s-1.375 5.806-1.625 6.887c-0.281 1.2-0.169 2.881-0.050 3.975-5.156-2.012-8.813-7.025-8.813-12.9 0-7.656 6.206-13.863 13.862-13.863s13.863 6.206 13.863 13.863c0 7.656-6.206 13.863-13.863 13.863z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="statistics">
+                        <h3>
+                          Pinterest
+                        </h3>
+                        <p>
+                            1,350
+                        </p>
+                    </div>
+                </div>
+                <div id="instagram" class="social">
+                    <div class="logo_holder">
+
+                        <svg class="social_logo" version="1.1" id="instagram_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+
+                            <path d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"
+                            />
+                            <path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"
+                            />
+                            <path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z" />
+                        </svg>
+                    </div>
+                    <div class="statistics">
+                        <h3>
+                            Instagram
+                          </h3>
+                        <p>
+                            2,750
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="new_and_recent" class="half_content">
+                <div id="new_members" class="half secondary_content widget">
+                    <h2 class="full_title">New Members</h2>
+                    <table id="new_members_table">
+                        <tr>
+                            <td class="new_member_pic member_pic" rowspan="2">
+                                <img src="members/member_1.jpg" />
+                            </td>
+                            <td class="member_name name_and_email">
+                                John Jones
+                            </td>
+                            <td class="date_joined" rowspan="2">
+                                15/2/16
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="member_email name_and_email">
+                                John.Jones@facebook.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="new_member_pic member_pic" rowspan="2">
+                                <img src="members/member_2.jpg" />
+                            </td>
+                            <td class="member_name name_and_email">
+                                John Jones
+                            </td>
+                            <td class="date_joined" rowspan="2">
+                                15/2/16
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="member_email name_and_email">
+                                John.Jones@facebook.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="new_member_pic member_pic" rowspan="2">
+                                <img src="members/member_3.jpg" />
+                            </td>
+                            <td class="member_name name_and_email">
+                                John Jones
+                            </td>
+                            <td class="date_joined" rowspan="2">
+                                15/2/16
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="member_email name_and_email">
+                                John.Jones@facebook.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="new_member_pic member_pic" rowspan="2">
+                                <img src="members/member_4.jpg" />
+                            </td>
+                            <td class="member_name name_and_email">
+                                John Jones
+                            </td>
+                            <td class="date_joined" rowspan="2">
+                                15/2/16
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="member_email name_and_email">
+                                John.Jones@facebook.com
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="recent_activity" class="half secondary_content widget">
+                    <h2 class="full_title">Recent Activity</h2>
+                    <table id="recent_activity_table">
+                        <tr>
+                            <td class="new_member_pic member_pic" rowspan="2">
+                                <img src="members/member_1.jpg" />
+                            </td>
+                            <td class="member_name name_and_email">
+                                John Jones
+                            </td>
+                            <td class="date_joined" rowspan="2">
+                                15/2/16
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="member_email name_and_email">
+                                John.Jones@facebook.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="new_member_pic member_pic" rowspan="2">
+                                <img src="members/member_2.jpg" />
+                            </td>
+                            <td class="member_name name_and_email">
+                                John Jones
+                            </td>
+                            <td class="date_joined" rowspan="2">
+                                15/2/16
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="member_email name_and_email">
+                                John.Jones@facebook.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="new_member_pic member_pic" rowspan="2">
+                                <img src="members/member_3.jpg" />
+                            </td>
+                            <td class="member_name name_and_email">
+                                John Jones
+                            </td>
+                            <td class="date_joined" rowspan="2">
+                                15/2/16
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="member_email name_and_email">
+                                John.Jones@facebook.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="new_member_pic member_pic" rowspan="2">
+                                <img src="members/member_4.jpg" />
+                            </td>
+                            <td class="member_name name_and_email">
+                                John Jones
+                            </td>
+                            <td class="date_joined" rowspan="2">
+                                15/2/16
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="member_email name_and_email">
+                                John.Jones@facebook.com
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="message_and_settings" class="half_content">
+
+
+                <div id="message_user" class="half secondary_content widget">
+                    <h2 class="full_title">Message User</h2>
+                    <form id="msging_users" class="form_layout">
+                        <label for="search_user"></label>
+                        <input id="search_user" class="search" type="text" placeholder="Search for user" />
+                        <label for="user_msg"></label>
+                        <textarea id="user_msg" placeholder="Message for user" name="user_msg"></textarea>
+                        <button id="msg_send" class="form_btn">Send</button>
+                    </form>
+                </div>
+
+                <div id="settings" class="half secondary_content widget">
+                    <h2 class="full_title">Settings</h2>
+                    <form id="settings_form" class="form_layout">
+                        <div class="switches">
+                            <label class="switch_labels" for="email_notifications">Send email notifications</label>
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="email_notifications" checked>
+                                <label class="onoffswitch-label" for="email_notifications">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="switches">
+                            <label class="switch_labels" for="public_profile">Set profile to public</label>
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="public_profile" checked>
+                                <label class="onoffswitch-label" for="public_profile">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <label for="timezone"></label>
+                        <select id="timezone" size="1">
+                            <option selected="selected" class="timezonePlaceholder">Select timezone</option>
+                            <option timezoneid="1" gmtadjustment="GMT-12:00" usedaylighttime="0" value="-12">(GMT-12:00) International Date Line West</option>
+                            <option timezoneid="2" gmtadjustment="GMT-11:00" usedaylighttime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+                            <option timezoneid="3" gmtadjustment="GMT-10:00" usedaylighttime="0" value="-10">(GMT-10:00) Hawaii</option>
+                            <option timezoneid="4" gmtadjustment="GMT-09:00" usedaylighttime="1" value="-9">(GMT-09:00) Alaska</option>
+                            <option timezoneid="5" gmtadjustment="GMT-08:00" usedaylighttime="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+                            <option timezoneid="6" gmtadjustment="GMT-08:00" usedaylighttime="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
+                            <option timezoneid="7" gmtadjustment="GMT-07:00" usedaylighttime="0" value="-7">(GMT-07:00) Arizona</option>
+                            <option timezoneid="8" gmtadjustment="GMT-07:00" usedaylighttime="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+                            <option timezoneid="9" gmtadjustment="GMT-07:00" usedaylighttime="1" value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
+                            <option timezoneid="10" gmtadjustment="GMT-06:00" usedaylighttime="0" value="-6">(GMT-06:00) Central America</option>
+                            <option timezoneid="11" gmtadjustment="GMT-06:00" usedaylighttime="1" value="-6">(GMT-06:00) Central Time (US & Canada)</option>
+                            <option timezoneid="12" gmtadjustment="GMT-06:00" usedaylighttime="1" value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+                            <option timezoneid="13" gmtadjustment="GMT-06:00" usedaylighttime="0" value="-6">(GMT-06:00) Saskatchewan</option>
+                            <option timezoneid="14" gmtadjustment="GMT-05:00" usedaylighttime="0" value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+                            <option timezoneid="15" gmtadjustment="GMT-05:00" usedaylighttime="1" value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
+                            <option timezoneid="16" gmtadjustment="GMT-05:00" usedaylighttime="1" value="-5">(GMT-05:00) Indiana (East)</option>
+                            <option timezoneid="17" gmtadjustment="GMT-04:00" usedaylighttime="1" value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
+                            <option timezoneid="18" gmtadjustment="GMT-04:00" usedaylighttime="0" value="-4">(GMT-04:00) Caracas, La Paz</option>
+                            <option timezoneid="19" gmtadjustment="GMT-04:00" usedaylighttime="0" value="-4">(GMT-04:00) Manaus</option>
+                            <option timezoneid="20" gmtadjustment="GMT-04:00" usedaylighttime="1" value="-4">(GMT-04:00) Santiago</option>
+                            <option timezoneid="21" gmtadjustment="GMT-03:30" usedaylighttime="1" value="-3.5">(GMT-03:30) Newfoundland</option>
+                            <option timezoneid="22" gmtadjustment="GMT-03:00" usedaylighttime="1" value="-3">(GMT-03:00) Brasilia</option>
+                            <option timezoneid="23" gmtadjustment="GMT-03:00" usedaylighttime="0" value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+                            <option timezoneid="24" gmtadjustment="GMT-03:00" usedaylighttime="1" value="-3">(GMT-03:00) Greenland</option>
+                            <option timezoneid="25" gmtadjustment="GMT-03:00" usedaylighttime="1" value="-3">(GMT-03:00) Montevideo</option>
+                            <option timezoneid="26" gmtadjustment="GMT-02:00" usedaylighttime="1" value="-2">(GMT-02:00) Mid-Atlantic</option>
+                            <option timezoneid="27" gmtadjustment="GMT-01:00" usedaylighttime="0" value="-1">(GMT-01:00) Cape Verde Is.</option>
+                            <option timezoneid="28" gmtadjustment="GMT-01:00" usedaylighttime="1" value="-1">(GMT-01:00) Azores</option>
+                            <option timezoneid="29" gmtadjustment="GMT+00:00" usedaylighttime="0" value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
+                            <option timezoneid="30" gmtadjustment="GMT+00:00" usedaylighttime="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+                            <option timezoneid="31" gmtadjustment="GMT+01:00" usedaylighttime="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+                            <option timezoneid="32" gmtadjustment="GMT+01:00" usedaylighttime="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+                            <option timezoneid="33" gmtadjustment="GMT+01:00" usedaylighttime="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+                            <option timezoneid="34" gmtadjustment="GMT+01:00" usedaylighttime="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+                            <option timezoneid="35" gmtadjustment="GMT+01:00" usedaylighttime="1" value="1">(GMT+01:00) West Central Africa</option>
+                            <option timezoneid="36" gmtadjustment="GMT+02:00" usedaylighttime="1" value="2">(GMT+02:00) Amman</option>
+                            <option timezoneid="37" gmtadjustment="GMT+02:00" usedaylighttime="1" value="2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+                            <option timezoneid="38" gmtadjustment="GMT+02:00" usedaylighttime="1" value="2">(GMT+02:00) Beirut</option>
+                            <option timezoneid="39" gmtadjustment="GMT+02:00" usedaylighttime="1" value="2">(GMT+02:00) Cairo</option>
+                            <option timezoneid="40" gmtadjustment="GMT+02:00" usedaylighttime="0" value="2">(GMT+02:00) Harare, Pretoria</option>
+                            <option timezoneid="41" gmtadjustment="GMT+02:00" usedaylighttime="1" value="2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+                            <option timezoneid="42" gmtadjustment="GMT+02:00" usedaylighttime="1" value="2">(GMT+02:00) Jerusalem</option>
+                            <option timezoneid="43" gmtadjustment="GMT+02:00" usedaylighttime="1" value="2">(GMT+02:00) Minsk</option>
+                            <option timezoneid="44" gmtadjustment="GMT+02:00" usedaylighttime="1" value="2">(GMT+02:00) Windhoek</option>
+                            <option timezoneid="45" gmtadjustment="GMT+03:00" usedaylighttime="0" value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+                            <option timezoneid="46" gmtadjustment="GMT+03:00" usedaylighttime="1" value="3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+                            <option timezoneid="47" gmtadjustment="GMT+03:00" usedaylighttime="0" value="3">(GMT+03:00) Nairobi</option>
+                            <option timezoneid="48" gmtadjustment="GMT+03:00" usedaylighttime="0" value="3">(GMT+03:00) Tbilisi</option>
+                            <option timezoneid="49" gmtadjustment="GMT+03:30" usedaylighttime="1" value="3.5">(GMT+03:30) Tehran</option>
+                            <option timezoneid="50" gmtadjustment="GMT+04:00" usedaylighttime="0" value="4">(GMT+04:00) Abu Dhabi, Muscat</option>
+                            <option timezoneid="51" gmtadjustment="GMT+04:00" usedaylighttime="1" value="4">(GMT+04:00) Baku</option>
+                            <option timezoneid="52" gmtadjustment="GMT+04:00" usedaylighttime="1" value="4">(GMT+04:00) Yerevan</option>
+                            <option timezoneid="53" gmtadjustment="GMT+04:30" usedaylighttime="0" value="4.5">(GMT+04:30) Kabul</option>
+                            <option timezoneid="54" gmtadjustment="GMT+05:00" usedaylighttime="1" value="5">(GMT+05:00) Yekaterinburg</option>
+                            <option timezoneid="55" gmtadjustment="GMT+05:00" usedaylighttime="0" value="5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+                            <option timezoneid="56" gmtadjustment="GMT+05:30" usedaylighttime="0" value="5.5">(GMT+05:30) Sri Jayawardenapura</option>
+                            <option timezoneid="57" gmtadjustment="GMT+05:30" usedaylighttime="0" value="5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+                            <option timezoneid="58" gmtadjustment="GMT+05:45" usedaylighttime="0" value="5.75">(GMT+05:45) Kathmandu</option>
+                            <option timezoneid="59" gmtadjustment="GMT+06:00" usedaylighttime="1" value="6">(GMT+06:00) Almaty, Novosibirsk</option>
+                            <option timezoneid="60" gmtadjustment="GMT+06:00" usedaylighttime="0" value="6">(GMT+06:00) Astana, Dhaka</option>
+                            <option timezoneid="61" gmtadjustment="GMT+06:30" usedaylighttime="0" value="6.5">(GMT+06:30) Yangon (Rangoon)</option>
+                            <option timezoneid="62" gmtadjustment="GMT+07:00" usedaylighttime="0" value="7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+                            <option timezoneid="63" gmtadjustment="GMT+07:00" usedaylighttime="1" value="7">(GMT+07:00) Krasnoyarsk</option>
+                            <option timezoneid="64" gmtadjustment="GMT+08:00" usedaylighttime="0" value="8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+                            <option timezoneid="65" gmtadjustment="GMT+08:00" usedaylighttime="0" value="8">(GMT+08:00) Kuala Lumpur, Singapore</option>
+                            <option timezoneid="66" gmtadjustment="GMT+08:00" usedaylighttime="0" value="8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+                            <option timezoneid="67" gmtadjustment="GMT+08:00" usedaylighttime="0" value="8">(GMT+08:00) Perth</option>
+                            <option timezoneid="68" gmtadjustment="GMT+08:00" usedaylighttime="0" value="8">(GMT+08:00) Taipei</option>
+                            <option timezoneid="69" gmtadjustment="GMT+09:00" usedaylighttime="0" value="9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+                            <option timezoneid="70" gmtadjustment="GMT+09:00" usedaylighttime="0" value="9">(GMT+09:00) Seoul</option>
+                            <option timezoneid="71" gmtadjustment="GMT+09:00" usedaylighttime="1" value="9">(GMT+09:00) Yakutsk</option>
+                            <option timezoneid="72" gmtadjustment="GMT+09:30" usedaylighttime="0" value="9.5">(GMT+09:30) Adelaide</option>
+                            <option timezoneid="73" gmtadjustment="GMT+09:30" usedaylighttime="0" value="9.5">(GMT+09:30) Darwin</option>
+                            <option timezoneid="74" gmtadjustment="GMT+10:00" usedaylighttime="0" value="10">(GMT+10:00) Brisbane</option>
+                            <option timezoneid="75" gmtadjustment="GMT+10:00" usedaylighttime="1" value="10">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+                            <option timezoneid="76" gmtadjustment="GMT+10:00" usedaylighttime="1" value="10">(GMT+10:00) Hobart</option>
+                            <option timezoneid="77" gmtadjustment="GMT+10:00" usedaylighttime="0" value="10">(GMT+10:00) Guam, Port Moresby</option>
+                            <option timezoneid="78" gmtadjustment="GMT+10:00" usedaylighttime="1" value="10">(GMT+10:00) Vladivostok</option>
+                            <option timezoneid="79" gmtadjustment="GMT+11:00" usedaylighttime="1" value="11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+                            <option timezoneid="80" gmtadjustment="GMT+12:00" usedaylighttime="1" value="12">(GMT+12:00) Auckland, Wellington</option>
+                            <option timezoneid="81" gmtadjustment="GMT+12:00" usedaylighttime="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+                            <option timezoneid="82" gmtadjustment="GMT+13:00" usedaylighttime="0" value="13">(GMT+13:00) Nuku'alofa</option>
+                        </select>
+                        <div class="buttons">
+                            <button id="save_settings" class="settings_btn form_btn" type="submit">Save</button>
+                            <button id="cancel_settings" class="settings_btn form_btn" type="cancel">Cancel</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
 
         </div>
-        <div id="pinterest" class="social">
-          <div class="logo_holder">
-
-            <svg class="social_logo" version="1.1" id="pinterest_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            	 viewbox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-
-            <path d="M16 0c-8.825 0-16 7.175-16 16s7.175 16 16 16 16-7.175 16-16-7.175-16-16-16zM16 29.863c-1.431 0-2.806-0.219-4.106-0.619 0.563-0.919 1.412-2.431 1.725-3.631 0.169-0.65 0.863-3.294 0.863-3.294 0.45 0.863 1.775 1.594 3.175 1.594 4.181 0 7.194-3.844 7.194-8.625 0-4.581-3.738-8.006-8.544-8.006-5.981 0-9.156 4.019-9.156 8.387 0 2.031 1.081 4.563 2.813 5.369 0.262 0.125 0.4 0.069 0.463-0.188 0.044-0.194 0.281-1.131 0.387-1.575 0.031-0.137 0.019-0.262-0.094-0.4-0.575-0.694-1.031-1.975-1.031-3.162 0-3.056 2.313-6.019 6.256-6.019 3.406 0 5.788 2.319 5.788 5.637 0 3.75-1.894 6.35-4.356 6.35-1.363 0-2.381-1.125-2.050-2.506 0.394-1.65 1.15-3.425 1.15-4.613 0-1.063-0.569-1.95-1.756-1.95-1.394 0-2.506 1.438-2.506 3.369 0 1.225 0.412 2.056 0.412 2.056s-1.375 5.806-1.625 6.887c-0.281 1.2-0.169 2.881-0.050 3.975-5.156-2.012-8.813-7.025-8.813-12.9 0-7.656 6.206-13.863 13.862-13.863s13.863 6.206 13.863 13.863c0 7.656-6.206 13.863-13.863 13.863z"/>
-            </svg>
-          </div>
-          <div class="statistics">
-            <h3>
-              Pinterest
-            </h3>
-            <p>
-              1,350
-            </p>
-          </div>
-        </div>
-        <div id="instagram" class="social">
-          <div class="logo_holder">
-
-            <svg class="social_logo" version="1.1" id="instagram_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            	 viewbox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-
-               <path d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"/>
-               <path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"/>
-               <path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"/>
-            </svg>
-          </div>
-          <div class="statistics">
-            <h3>
-              Instagram
-            </h3>
-            <p>
-              2,750
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-      <div id="new_and_recent" class="half_content">
-        <div id="new_members" class="half secondary_content">
-          <h2 class="full_title">New Members</h2>
-          <table id="new_members_table">
-            <tr>
-              <td class="new_member_pic member_pic" rowspan="2">
-                <img src="members/member_1.jpg" />
-              </td>
-              <td  class="member_name name_and_email">
-                John Jones
-              </td>
-              <td class="date_joined" rowspan="2">
-                15/2/16
-              </td>
-            </tr>
-            <tr>
-              <td class="member_email name_and_email">
-                John.Jones@facebook.com
-              </td>
-            </tr>
-            <tr>
-              <td class="new_member_pic member_pic" rowspan="2">
-                <img src="members/member_2.jpg" />
-              </td>
-              <td  class="member_name name_and_email">
-                John Jones
-              </td>
-              <td class="date_joined" rowspan="2">
-                15/2/16
-              </td>
-            </tr>
-            <tr>
-              <td class="member_email name_and_email">
-                John.Jones@facebook.com
-              </td>
-            </tr>
-            <tr>
-              <td class="new_member_pic member_pic" rowspan="2">
-                <img src="members/member_3.jpg" />
-              </td>
-              <td  class="member_name name_and_email">
-                John Jones
-              </td>
-              <td class="date_joined" rowspan="2">
-                15/2/16
-              </td>
-            </tr>
-            <tr>
-              <td class="member_email name_and_email">
-                John.Jones@facebook.com
-              </td>
-            </tr>
-            <tr>
-              <td class="new_member_pic member_pic" rowspan="2">
-                <img src="members/member_4.jpg" />
-              </td>
-              <td  class="member_name name_and_email">
-                John Jones
-              </td>
-              <td class="date_joined" rowspan="2">
-                15/2/16
-              </td>
-            </tr>
-            <tr>
-              <td class="member_email name_and_email">
-                John.Jones@facebook.com
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div id="recent_activity" class="half secondary_content">
-          <h2 class="full_title">Recent Activity</h2>
-          <table id="recent_activity_table">
-            <tr>
-              <td class="new_member_pic member_pic" rowspan="2">
-                <img src="members/member_1.jpg" />
-              </td>
-              <td  class="member_name name_and_email">
-                John Jones
-              </td>
-              <td class="date_joined" rowspan="2">
-                15/2/16
-              </td>
-            </tr>
-            <tr>
-              <td class="member_email name_and_email">
-                John.Jones@facebook.com
-              </td>
-            </tr>
-            <tr>
-              <td class="new_member_pic member_pic" rowspan="2">
-                <img src="members/member_2.jpg" />
-              </td>
-              <td  class="member_name name_and_email">
-                John Jones
-              </td>
-              <td class="date_joined" rowspan="2">
-                15/2/16
-              </td>
-            </tr>
-            <tr>
-              <td class="member_email name_and_email">
-                John.Jones@facebook.com
-              </td>
-            </tr>
-            <tr>
-              <td class="new_member_pic member_pic" rowspan="2">
-                <img src="members/member_3.jpg" />
-              </td>
-              <td  class="member_name name_and_email">
-                John Jones
-              </td>
-              <td class="date_joined" rowspan="2">
-                15/2/16
-              </td>
-            </tr>
-            <tr>
-              <td class="member_email name_and_email">
-                John.Jones@facebook.com
-              </td>
-            </tr>
-            <tr>
-              <td class="new_member_pic member_pic" rowspan="2">
-                <img src="members/member_4.jpg" />
-              </td>
-              <td  class="member_name name_and_email">
-                John Jones
-              </td>
-              <td class="date_joined" rowspan="2">
-                15/2/16
-              </td>
-            </tr>
-            <tr>
-              <td class="member_email name_and_email">
-                John.Jones@facebook.com
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-
-      <div id="message_and_settings" class="half_content">
-
-
-        <div id="message_user" class="half secondary_content">
-          <h2 class="full_title">Message User</h2>
-        </div>
-
-        <div id="settings" class="half secondary_content">
-          <h2 class="full_title">Settings</h2>
-        </div>
-      </div>
 
     </div>
-
-</div>
 
 
     <!-- Script tags -->
@@ -366,5 +493,6 @@
     <script src="js/app.js"></script>
 
 
-  </body>
+</body>
+
 </html>

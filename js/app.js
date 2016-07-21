@@ -70,7 +70,7 @@ $monthly.on("click", function() {
 var hourly_data = {
     labels: ["0:00", "02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"],
     datasets: [{
-        fill: false,
+        fill: true,
         lineTension: 0.1,
         backgroundColor: "rgba(96, 96, 177,0.4)",
         borderColor: "#6060b1",
@@ -86,20 +86,35 @@ var hourly_data = {
         pointHoverBackgroundColor: "#6060b1",
         pointHoverBorderColor: "#6060b1",
         pointHoverBorderWidth: 2,
-        pointRadius: 8,
+        pointRadius: 4,
         pointHitRadius: 10,
         data: [40, 70, 80, 20, 40, 10, 30, 50, 90, 100, 110, 80, 55]
     }]
 };
 
 var myLineChart = Chart.Line($traffic_chart_hourly, {
-    data: hourly_data
+    data: hourly_data,
+    options: {
+        legend: {
+            display: false
+        },
+        responsive: true,
+        scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 150,
+                        beginAtZero: true
+                    }
+                }]
+        }
+    }
 });
 
 // DAILY CHART
 
 var daily_data = {
-    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     datasets: [{
         fill: true,
         lineTension: 0.1,
@@ -117,18 +132,72 @@ var daily_data = {
         pointHoverBackgroundColor: "#6060b1",
         pointHoverBorderColor: "#6060b1",
         pointHoverBorderWidth: 2,
-        pointRadius: 8,
+        pointRadius: 4,
+        pointHitRadius: 10,
+        data: [80, 100, 140, 100, 130, 140, 120]
+    }]
+};
+
+var daily_data2 = {
+    labels: ["M", "T", "W", "T", "F", "S", "S"],
+    datasets: [{
+        fill: true,
+        backgroundColor: "#6060b1",
+        borderColor: "#6060b1",
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: 'miter',
+        borderWidth: 2,
+        pointBorderColor: "#6060b1",
+        pointBackgroundColor: "#fff",
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: "#6060b1",
+        pointHoverBorderColor: "#6060b1",
+        pointHoverBorderWidth: 2,
+        pointRadius: 4,
         pointHitRadius: 10,
         data: [80, 100, 140, 100, 130, 140, 120]
     }]
 };
 
 var myLineChart = Chart.Line($traffic_chart_daily, {
-    data: daily_data
+    data: daily_data,
+    options: {
+        legend: {
+            display: false
+        },
+        responsive: true,
+        scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 200,
+                        beginAtZero: true
+                    }
+                }]
+        }
+    }
 });
 
-var myLineChart = Chart.Line($traffic_chart_daily2, {
-    data: daily_data
+new Chart($traffic_chart_daily2, {
+    type: "bar",
+    data: daily_data2,
+    options: {
+        scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        },
+        responsive: true,
+        legend: {
+            display: false
+        }
+    }
 });
 
 // WEEKLY CHART
@@ -152,14 +221,29 @@ var weekly_data = {
         pointHoverBackgroundColor: "#6060b1",
         pointHoverBorderColor: "#6060b1",
         pointHoverBorderWidth: 2,
-        pointRadius: 8,
+        pointRadius: 4,
         pointHitRadius: 10,
         data: [0, 200, 400, 300, 275, 425, 450, 500, 525, 375, 300, 350, 400, 225]
     }]
 };
 
 var myLineChart = Chart.Line($traffic_chart_weekly, {
-    data: weekly_data
+    data: weekly_data,
+    options: {
+        legend: {
+            display: false
+        },
+        responsive: true,
+        scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 600,
+                        beginAtZero: true
+                    }
+                }]
+        }
+    }
 });
 
 // MONTHLY CHART
@@ -183,14 +267,29 @@ var monthly_data = {
         pointHoverBackgroundColor: "#6060b1",
         pointHoverBorderColor: "#6060b1",
         pointHoverBorderWidth: 2,
-        pointRadius: 8,
+        pointRadius: 4,
         pointHitRadius: 10,
         data: [500, 600, 350, 550, 600, 800, 400, 500, 400, 300, 500, 750]
     }]
 };
 
 var myLineChart = Chart.Line($traffic_chart_monthly, {
-    data: monthly_data
+    data: monthly_data,
+    options: {
+        legend: {
+            display: false
+        },
+        responsive: true,
+        scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 1000,
+                        beginAtZero: true
+                    }
+                }]
+        }
+    }
 });
 
 // PIE CHART
