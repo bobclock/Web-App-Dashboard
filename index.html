@@ -12,21 +12,21 @@
 <body>
     <header class="main_header">
       <h1 class="web_title">
-        <a href="">
-        WebAppTM
+        <a href="" class="">
+        <b>Web</b>App<sup>TM</sup>
         </a>
       </h1>
         <ul class="main_nav">
-            <li>
-                <a id="notification_nav" class="" href="">Notifcation</a>
+            <li class="li_nav notification_nav">
+                <a id="notification_nav" href=""><img id="bell_img" src="icons/icon-bell.svg"/></a>
                 <!--link -->
             </li>
-            <li>
-                <a id="profile_nav" class="" href="">Profile Pic</a>
+            <li class="li_nav">
+                <a id="profile_nav" href=""><img id="profile_img" src="members/member_1.jpg"/></a>
                 <!--link-->
             </li>
-            <li>
-                <a id="name_nav" class="" href="">Name</a>
+            <li class="li_nav name_nav">
+                <a id="name_nav" href="">Joe Bloggs</a>
                 <!--link -->
             </li>
         </ul>
@@ -56,14 +56,18 @@
             <div id="search_holder">
                 <h2 id="dash">Dashboard</h2>
                 <div id="search_div">
-                    <label for="search_dashboard"></label>
-                    <input id="search_dashboard" class="search" type="text" placeholder="Search" />
+                    <form class="" action="index.html" method="post">
+                      <label for="search_dashboard"></label>
+                      <input id="search_dashboard" class="search" type="text" placeholder="Search" />
+                    </form>
                 </div>
             </div>
 
-            <div id="alert">
-                Some text here
-                <span id="close">x</span>
+            <div class="alert">
+                <p class="alert_txt">
+                  <b>Alert:</b> what happens when this text is longer than one line of copy
+                </p>
+                <span class="close">x</span>
             </div>
 
             <div id="traffic" class="full secondary_content widget">
@@ -211,66 +215,66 @@
                     <h2 class="full_title">New Members</h2>
                     <table id="new_members_table">
                         <tr>
-                            <td class="new_member_pic member_pic" rowspan="2">
-                                <img src="members/member_1.jpg" />
+                            <td class="td_member_pic table_borders" rowspan="2">
+                                <img class="member_pic" src="members/member_1.jpg" />
                             </td>
-                            <td class="member_name name_and_email">
+                            <td class="first_row name">
                                 John Jones
                             </td>
-                            <td class="date_joined" rowspan="2">
+                            <td class="date_joined final_column table_borders" rowspan="2">
                                 15/2/16
                             </td>
                         </tr>
                         <tr>
-                            <td class="member_email name_and_email">
+                            <td class="second_row email table_borders">
                                 John.Jones@facebook.com
                             </td>
                         </tr>
                         <tr>
-                            <td class="new_member_pic member_pic" rowspan="2">
-                                <img src="members/member_2.jpg" />
+                            <td class="td_member_pic table_borders" rowspan="2">
+                                <img class="member_pic" src="members/member_2.jpg" />
                             </td>
-                            <td class="member_name name_and_email">
+                            <td class="first_row name">
                                 John Jones
                             </td>
-                            <td class="date_joined" rowspan="2">
+                            <td class="date_joined final_column table_borders" rowspan="2">
                                 15/2/16
                             </td>
                         </tr>
                         <tr>
-                            <td class="member_email name_and_email">
+                            <td class="second_row email table_borders">
                                 John.Jones@facebook.com
                             </td>
                         </tr>
                         <tr>
-                            <td class="new_member_pic member_pic" rowspan="2">
-                                <img src="members/member_3.jpg" />
+                            <td class="td_member_pic table_borders" rowspan="2">
+                                <img class="member_pic" src="members/member_3.jpg" />
                             </td>
-                            <td class="member_name name_and_email">
+                            <td class="first_row name">
                                 John Jones
                             </td>
-                            <td class="date_joined" rowspan="2">
+                            <td class="date_joined final_column table_borders" rowspan="2">
                                 15/2/16
                             </td>
                         </tr>
                         <tr>
-                            <td class="member_email name_and_email">
+                            <td class="second_row email table_borders">
                                 John.Jones@facebook.com
                             </td>
                         </tr>
                         <tr>
-                            <td class="new_member_pic member_pic" rowspan="2">
-                                <img src="members/member_4.jpg" />
+                            <td class="td_member_pic table_borders_bottom" rowspan="2">
+                                <img class="member_pic" src="members/member_4.jpg" />
                             </td>
-                            <td class="member_name name_and_email">
+                            <td class="first_row name">
                                 John Jones
                             </td>
-                            <td class="date_joined" rowspan="2">
+                            <td class="date_joined final_column table_borders_bottom" rowspan="2">
                                 15/2/16
                             </td>
                         </tr>
                         <tr>
-                            <td class="member_email name_and_email">
+                            <td class="second_row email table_borders_bottom">
                                 John.Jones@facebook.com
                             </td>
                         </tr>
@@ -281,67 +285,67 @@
                     <h2 class="full_title">Recent Activity</h2>
                     <table id="recent_activity_table">
                         <tr>
-                            <td class="new_member_pic member_pic" rowspan="2">
-                                <img src="members/member_1.jpg" />
+                            <td class="td_member_pic table_borders" rowspan="2">
+                                <img class="member_pic" src="members/member_1.jpg" />
                             </td>
-                            <td class="member_name name_and_email">
-                                John Jones
+                            <td class="first_row activity">
+                                Victoria Chambers commented on YourApp's SEO tips
                             </td>
-                            <td class="date_joined" rowspan="2">
-                                15/2/16
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="member_email name_and_email">
-                                John.Jones@facebook.com
+                            <td class="activity_img final_column table_borders" rowspan="2">
+                                <img class="activity_icon" src="icons/comment.png" />
                             </td>
                         </tr>
                         <tr>
-                            <td class="new_member_pic member_pic" rowspan="2">
-                                <img src="members/member_2.jpg" />
-                            </td>
-                            <td class="member_name name_and_email">
-                                John Jones
-                            </td>
-                            <td class="date_joined" rowspan="2">
-                                15/2/16
+                            <td class="second_row comment_time table_borders">
+                                4 hours ago
                             </td>
                         </tr>
                         <tr>
-                            <td class="member_email name_and_email">
-                                John.Jones@facebook.com
+                            <td class="td_member_pic table_borders" rowspan="2">
+                                <img class="member_pic" src="members/member_2.jpg" />
+                            </td>
+                            <td class="first_row activity">
+                                Dale Byrd liked the post Facebook's changes for 2016
+                            </td>
+                            <td class="activity_img final_column table_borders" rowspan="2">
+                                <img class="activity_icon" src="icons/like.png" />
                             </td>
                         </tr>
                         <tr>
-                            <td class="new_member_pic member_pic" rowspan="2">
-                                <img src="members/member_3.jpg" />
-                            </td>
-                            <td class="member_name name_and_email">
-                                John Jones
-                            </td>
-                            <td class="date_joined" rowspan="2">
-                                15/2/16
+                            <td class="second_row comment_time table_borders">
+                                5 hours ago
                             </td>
                         </tr>
                         <tr>
-                            <td class="member_email name_and_email">
-                                John.Jones@facebook.com
+                            <td class="td_member_pic table_borders" rowspan="2">
+                                <img class="member_pic" src="members/member_3.jpg" />
+                            </td>
+                            <td class="first_row activity">
+                                Dawn Wood commented on Facebook's changes for 2016
+                            </td>
+                            <td class="activity_img final_column table_borders" rowspan="2">
+                                <img class="activity_icon" src="icons/comment.png" />
                             </td>
                         </tr>
                         <tr>
-                            <td class="new_member_pic member_pic" rowspan="2">
-                                <img src="members/member_4.jpg" />
-                            </td>
-                            <td class="member_name name_and_email">
-                                John Jones
-                            </td>
-                            <td class="date_joined" rowspan="2">
-                                15/2/16
+                            <td class="second_row comment_time table_borders">
+                                5 hours ago
                             </td>
                         </tr>
                         <tr>
-                            <td class="member_email name_and_email">
-                                John.Jones@facebook.com
+                            <td class="td_member_pic table_borders_bottom" rowspan="2">
+                                <img class="member_pic" src="members/member_4.jpg" />
+                            </td>
+                            <td class="first_row activity">
+                                Dan Oliver  posted YourApp's SEO tips
+                            </td>
+                            <td class="activity_img final_column table_borders_bottom" rowspan="2">
+                                <img class="activity_icon" src="icons/post.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="second_row comment_time table_borders_bottom">
+                                1 day ago
                             </td>
                         </tr>
                     </table>
