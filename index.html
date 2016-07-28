@@ -11,18 +11,18 @@
 
 <body>
     <header class="main_header">
-      <h1 class="web_title">
+        <h1 class="web_title">
         <a href="" class="">
         <b>Web</b>App<sup>TM</sup>
         </a>
       </h1>
         <ul class="main_nav">
             <li class="li_nav notification_nav">
-                <a id="notification_nav" href=""><img id="bell_img" src="icons/icon-bell.svg"/></a>
+                <a id="notification_nav" href=""><img id="bell_img" src="icons/icon-bell-alert.png" /></a>
                 <!--link -->
             </li>
             <li class="li_nav">
-                <a id="profile_nav" href=""><img id="profile_img" src="members/member_1.jpg"/></a>
+                <a id="profile_nav" href=""><img id="profile_img" src="members/member_1.jpg" /></a>
                 <!--link-->
             </li>
             <li class="li_nav name_nav">
@@ -31,6 +31,35 @@
             </li>
         </ul>
     </header>
+
+    <div id="notifications_txt">
+        <table id="notifications_table">
+            <tr class="notifications_row">
+                <td>
+                    <img class="notification_img" src="members/member_1.jpg" />
+                </td>
+                <td>
+                    Some alert for the user
+                </td>
+            </tr>
+            <tr class="notifications_row">
+                <td>
+                    <img class="notification_img" src="members/member_1.jpg" />
+                </td>
+                <td>
+                    Some alert for the user
+                </td>
+            </tr>
+            <tr class="notifications_row">
+                <td>
+                    <img class="notification_img" src="members/member_1.jpg" />
+                </td>
+                <td>
+                    Some alert for the user
+                </td>
+            </tr>
+        </table>
+    </div>
 
     <div class="main_page">
 
@@ -57,15 +86,15 @@
                 <h2 id="dash">Dashboard</h2>
                 <div id="search_div">
                     <form class="" action="index.html" method="post">
-                      <label for="search_dashboard"></label>
-                      <input id="search_dashboard" class="search" type="text" placeholder="Search" />
+                        <label for="search_dashboard"></label>
+                        <input id="search_dashboard" class="search" type="text" placeholder="Search" />
                     </form>
                 </div>
             </div>
 
             <div class="alert">
                 <p class="alert_txt">
-                  <b>Alert:</b> what happens when this text is longer than one line of copy
+                    <b>Alert:</b> what happens when this text is longer than one line of copy
                 </p>
                 <span class="close">x</span>
             </div>
@@ -222,7 +251,7 @@
                                 John Jones
                             </td>
                             <td class="date_joined final_column table_borders" rowspan="2">
-                                15/2/16
+                                15/02/16
                             </td>
                         </tr>
                         <tr>
@@ -235,15 +264,15 @@
                                 <img class="member_pic" src="members/member_2.jpg" />
                             </td>
                             <td class="first_row name">
-                                John Jones
+                                Megan Green
                             </td>
                             <td class="date_joined final_column table_borders" rowspan="2">
-                                15/2/16
+                                18/04/16
                             </td>
                         </tr>
                         <tr>
                             <td class="second_row email table_borders">
-                                John.Jones@facebook.com
+                                Megan.Green@example.com
                             </td>
                         </tr>
                         <tr>
@@ -251,15 +280,15 @@
                                 <img class="member_pic" src="members/member_3.jpg" />
                             </td>
                             <td class="first_row name">
-                                John Jones
+                                James Campbell
                             </td>
                             <td class="date_joined final_column table_borders" rowspan="2">
-                                15/2/16
+                                21/01/16
                             </td>
                         </tr>
                         <tr>
                             <td class="second_row email table_borders">
-                                John.Jones@facebook.com
+                                James.Campbell@example.com
                             </td>
                         </tr>
                         <tr>
@@ -267,15 +296,15 @@
                                 <img class="member_pic" src="members/member_4.jpg" />
                             </td>
                             <td class="first_row name">
-                                John Jones
+                                Lucian Fox
                             </td>
                             <td class="date_joined final_column table_borders_bottom" rowspan="2">
-                                15/2/16
+                                05/12/15
                             </td>
                         </tr>
                         <tr>
                             <td class="second_row email table_borders_bottom">
-                                John.Jones@facebook.com
+                                Lucian.Fox@example.com
                             </td>
                         </tr>
                     </table>
@@ -337,7 +366,7 @@
                                 <img class="member_pic" src="members/member_4.jpg" />
                             </td>
                             <td class="first_row activity">
-                                Dan Oliver  posted YourApp's SEO tips
+                                Dan Oliver posted YourApp's SEO tips
                             </td>
                             <td class="activity_img final_column table_borders_bottom" rowspan="2">
                                 <img class="activity_icon" src="icons/post.png" />
@@ -360,6 +389,9 @@
                     <form id="msging_users" class="form_layout">
                         <label for="search_user"></label>
                         <input id="search_user" class="search" type="text" placeholder="Search for user" />
+                        <div id="autocomplete">
+
+                        </div>
                         <label for="user_msg"></label>
                         <textarea id="user_msg" placeholder="Message for user" name="user_msg"></textarea>
                         <button id="msg_send" class="form_btn">Send</button>
@@ -369,7 +401,7 @@
                 <div id="settings" class="half secondary_content widget">
                     <h2 class="full_title">Settings</h2>
                     <form id="settings_form" class="form_layout">
-                        <div class="switches">
+                        <div id="switch_email" class="switches">
                             <label class="switch_labels" for="email_notifications">Send email notifications</label>
                             <div class="onoffswitch">
                                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="email_notifications" checked>
@@ -380,7 +412,7 @@
                             </div>
                         </div>
 
-                        <div class="switches">
+                        <div id="switch_profile" class="switches">
                             <label class="switch_labels" for="public_profile">Set profile to public</label>
                             <div class="onoffswitch">
                                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="public_profile" checked>
@@ -479,7 +511,7 @@
                         </select>
                         <div class="buttons">
                             <button id="save_settings" class="settings_btn form_btn" type="submit">Save</button>
-                            <button id="cancel_settings" class="settings_btn form_btn" type="cancel">Cancel</button>
+                            <button id="cancel_settings" class="settings_btn form_btn" type="cancel">Clear</button>
                         </div>
 
                     </form>
@@ -493,6 +525,7 @@
 
     <!-- Script tags -->
     <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script src="js/chart.js"></script>
     <script src="js/app.js"></script>
 

@@ -11,7 +11,7 @@ a {
     color: white;
 }
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 .main_page {
     display: flex;
@@ -37,51 +37,72 @@ a:visited {
     flex-direction: column;
     align-items: center;
 }
-
 h1 {
-  font-weight: lighter;
-  margin: 0;
+    font-weight: lighter;
+    margin: 0;
 }
-
 .web_title {
-  margin: 10px 0;
+    margin: 10px 0;
 }
-
 .li_nav {
-  width: 50px;
-  margin: 10px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 50px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .notification_nav {
-  border-right: solid 1px black
+    border-right: solid 1px black
 }
-
 .name_nav {
-  width: 100px;
+    width: 100px;
 }
-
 .li_nav a {
-  display: flex;
+    display: flex;
 }
-
 #name_nav {
-  text-align: left;
-  justify-content: flex-start;
+    text-align: left;
+    justify-content: flex-start;
 }
-
 #bell_img {
-  height: 25px;
-  text-align: right;
+    height: 25px;
+    text-align: right;
+    opacity: 0.75;
 }
-
+#bell_img:hover {
+    opacity: 1;
+}
 #profile_img {
-  border-radius: 50%;
-  height: 30px;
+    border-radius: 50%;
+    height: 30px;
 }
 
+/*NOTIFICATIONS STYLES*/
+
+#notifications_txt {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+}
+#notifications_table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #6060b1;
+    opacity: 0.95;
+    color: white;
+    font-weight: lighter;
+}
+
+
+.notification_img {
+    border-radius: 50%;
+    width: 50px;
+}
+.notifications_row:hover{
+  background-color: #3c395e;
+}
 
 /*SIDE NAV STYLES*/
 
@@ -97,6 +118,11 @@ h1 {
     width: 10%;
     margin: 5px;
     text-align: center;
+    opacity: 0.5;
+}
+.nav_icon:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 .side_nav li {
     list-style: none;
@@ -156,6 +182,12 @@ b {
     font-weight: bold;
     font-size: 1.375em;
     /* 22/16 */
+    transition: all 0.25s;
+}
+.close:hover {
+    cursor: pointer;
+    font-size: 1.5em;
+    /* 24/16 */
 }
 
 /*WIDGETS STYLES*/
@@ -209,6 +241,21 @@ canvas {
 
 /*SOCIAL STYLES*/
 
+@keyframes turn {
+  0% {
+    transform: rotate(0) scale(0);
+  }
+  60% {
+    transform: rotate(375deg) scale(1.1);
+  }
+  80% {
+    transform: rotate(350deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
 h3 {
     color: #6060b1;
     margin: 0;
@@ -239,6 +286,7 @@ h3 {
     width: 60px;
     height: 60px;
     margin: 10px;
+    transition: 0.5s all;
 }
 .social_logo {
     height: 30px;
@@ -246,6 +294,7 @@ h3 {
 }
 .social_logo path {
     fill: white;
+    transition: 0.5s all;
 }
 .statistics {
     width: 70%;
@@ -255,6 +304,18 @@ h3 {
     font-size: 1.75em;
     /* 28/16 */
     font-weight: 100;
+}
+
+.social:hover .logo_holder {
+  background-color: #3c395e;
+}
+
+.social:hover .social_logo path {
+  animation: turn 1s ease-out backwards;
+}
+
+svg * {
+  transform-origin: 50% 50%;
 }
 
 /*HALVED CONTENT STYLES */
@@ -321,6 +382,7 @@ td {
     width: 30px;
 }
 
+
 /*FORM WIDGET STYLES*/
 
 .form_layout {
@@ -333,11 +395,18 @@ td {
     box-sizing: border-box;
     width: 100%;
     margin: 10px 0;
+    padding-left: 10px;
+    color: #6060b1;
+}
+#msg_send{
+  color: white;
 }
 #user_msg {
     border-radius: 5px;
     border: solid 1px #c8c8c8;
     height: 100px;
+    padding-left: 10px;
+    color: #6060b1;
 }
 .form_btn {
     height: 40px;
@@ -383,27 +452,48 @@ select {
 }
 
 /*PLACEHOLDER STYLES*/
+
 ::-webkit-input-placeholder {
     color: #c8c8c8;
-    padding-left: 5px;
     font-style: italic;
 }
 :-moz-placeholder {
     /* Firefox 18- */
     color: #c8c8c8;
-    padding-left: 5px;
     font-style: italic;
 }
 ::-moz-placeholder {
     /* Firefox 19+ */
     color: #c8c8c8;
-    padding-left: 5px;
     font-style: italic;
 }
 :-ms-input-placeholder {
     color: #c8c8c8;
-    padding-left: 5px;
     font-style: italic;
+}
+
+/*SEARCH AUTOCMPLETE STYLES*/
+
+.ui-menu-item {
+    color: white;
+    transition: all 0.5s;
+    list-style: none;
+    text-align: left;
+    background-color: #6060b1;
+    padding: 5px 0;
+}
+
+.ui-menu-item:hover{
+  cursor: pointer;
+  color: #c8c8c8;
+  background-color: #3c395e;
+}
+
+.ui_menu {
+    left: -40px;
+}
+.ui-menu-divider {
+    margin: 5px 0;
 }
 
 /*ON OFF SWITCH STYLES*/
@@ -538,7 +628,6 @@ select {
         flex-direction: row;
         justify-content: space-between;
     }
-
     .web_title {
         margin-left: 10px;
     }
@@ -582,7 +671,6 @@ select {
     .settings_btn {
         width: 45%;
     }
-
     /*TABLES STYLES*/
     .activity_icon {
         height: 50px;

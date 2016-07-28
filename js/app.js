@@ -9,7 +9,13 @@ $traffic_chart_daily = $("#traffic_chart_daily");
 $traffic_chart_daily2 = $("#traffic_chart_daily2");
 $traffic_chart_weekly = $("#traffic_chart_weekly");
 $traffic_chart_monthly = $("#traffic_chart_monthly");
-$mobile_users_chart = $("mobile_users_chart");
+$mobile_users_chart = $("#mobile_users_chart");
+$notifications_txt = $("#notifications_txt");
+$notifications_bell = $("#bell_img");
+$alert_div = $(".alert");
+$close_alert = $(".close");
+$save = $("#save_settings");
+$cancel = $("#cancel_settings");
 
 // TRAFFIC CHARTS
 
@@ -100,13 +106,13 @@ var myLineChart = Chart.Line($traffic_chart_hourly, {
         },
         responsive: true,
         scales: {
-                yAxes: [{
-                    ticks: {
-                        min: 0,
-                        max: 150,
-                        beginAtZero: true
-                    }
-                }]
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 140,
+                    beginAtZero: true
+                }
+            }]
         }
     }
 });
@@ -141,26 +147,18 @@ var daily_data = {
 var daily_data2 = {
     labels: ["M", "T", "W", "T", "F", "S", "S"],
     datasets: [{
-        fill: true,
+        label: "Mobile",
+        backgroundColor: "#62a2b1",
+        borderColor: "transparent",
+        data: [30, 70, 40, 50, 65, 75, 80]
+    }, {
+        label: "Desktop",
         backgroundColor: "#6060b1",
-        borderColor: "#6060b1",
-        borderCapStyle: 'butt',
-        borderDash: [],
-        borderDashOffset: 0.0,
-        borderJoinStyle: 'miter',
-        borderWidth: 2,
-        pointBorderColor: "#6060b1",
-        pointBackgroundColor: "#fff",
-        pointBorderWidth: 1,
-        pointHoverRadius: 5,
-        pointHoverBackgroundColor: "#6060b1",
-        pointHoverBorderColor: "#6060b1",
-        pointHoverBorderWidth: 2,
-        pointRadius: 4,
-        pointHitRadius: 10,
-        data: [80, 100, 140, 100, 130, 140, 120]
+        borderColor: "transparent",
+        data: [40, 30, 50, 70, 40, 70, 50]
     }]
 };
+
 
 var myLineChart = Chart.Line($traffic_chart_daily, {
     data: daily_data,
@@ -170,32 +168,35 @@ var myLineChart = Chart.Line($traffic_chart_daily, {
         },
         responsive: true,
         scales: {
-                yAxes: [{
-                    ticks: {
-                        min: 0,
-                        max: 200,
-                        beginAtZero: true
-                    }
-                }]
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 200,
+                    beginAtZero: true
+                }
+            }]
         }
     }
 });
+
 
 new Chart($traffic_chart_daily2, {
     type: "bar",
     data: daily_data2,
     options: {
-        scales: {
-            xAxes: [{
-                stacked: true
-            }],
-            yAxes: [{
-                stacked: true
-            }]
-        },
         responsive: true,
         legend: {
-            display: false
+            display: true
+        },
+        barValueSpacing: 20,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100,
+                    beginAtZero: true
+                }
+            }]
         }
     }
 });
@@ -235,13 +236,13 @@ var myLineChart = Chart.Line($traffic_chart_weekly, {
         },
         responsive: true,
         scales: {
-                yAxes: [{
-                    ticks: {
-                        min: 0,
-                        max: 600,
-                        beginAtZero: true
-                    }
-                }]
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 600,
+                    beginAtZero: true
+                }
+            }]
         }
     }
 });
@@ -281,13 +282,13 @@ var myLineChart = Chart.Line($traffic_chart_monthly, {
         },
         responsive: true,
         scales: {
-                yAxes: [{
-                    ticks: {
-                        min: 0,
-                        max: 1000,
-                        beginAtZero: true
-                    }
-                }]
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 1000,
+                    beginAtZero: true
+                }
+            }]
         }
     }
 });
@@ -314,7 +315,7 @@ var pie_data = {
         hoverBackgroundColor: [
             "#406a74",
             "#497e51",
-            "#3f3f77",
+            "#3c395e",
             "#4f2a2a",
             "#69752a"
         ]
@@ -329,4 +330,103 @@ new Chart(pie_chart, {
     animation: {
         animationScale: true
     }
+});
+
+
+// NOTIFCATIONS BAR
+
+$notifications_txt.hide();
+
+$notifications_bell.on('click', function(e) {
+    e.preventDefault();
+    $notifications_bell.attr('src', 'icons/icon-bell.svg');
+    $notifications_txt.show();
+});
+
+$notifications_txt.on('click', function() {
+    $notifications_txt.hide();
+});
+
+// ALERTS BAR
+$close_alert.on('click', function() {
+    $alert_div.hide();
+});
+
+// SEARCH FX
+
+// $(".user-list-item").hide();
+//
+// $("#search_user").on("keyup", function() {
+//     var g = $(this).val().toLowerCase();
+//     $(".user-list-item").each(function() {
+//         var s = $(this).text().toLowerCase();
+//         $(this).closest('.user-list-item')[ s.indexOf(g) !== -1 ? 'show' : 'hide' ]();
+//     });
+// });
+
+$(function() {
+    var availableTags = [
+        "James Campbell",
+        "John Jones",
+        "Lucian Fox",
+        "Megan Green"
+    ];
+    $("#search_user").autocomplete({
+        source: availableTags,
+        appendTo: '#autocomplete'
+    });
+});
+
+var cw = $('#search_user').width();
+$('.ui-menu-item').css({
+    'height': cw
+});
+
+// SETTINGS SAVE
+
+
+
+$(function() {
+    $('#timezone').on('change', function() {
+        localStorage.setItem('todoData', this.value);
+    });
+    if (localStorage.getItem('todoData')) {
+        $('#timezone').val(localStorage.getItem('todoData'));
+    }
+});
+
+var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {};
+var $checkboxes = $("#switch_email :checkbox");
+
+$save.on('click', function(e) {
+    e.preventDefault();
+    $checkboxes.each(function() {
+        checkboxValues[this.id] = this.checked;
+    });
+    localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
+});
+
+var checkboxValues2 = JSON.parse(localStorage.getItem('checkboxValues2')) || {};
+var $checkboxes2 = $("#switch_profile :checkbox");
+
+$save.on('click', function(e) {
+    e.preventDefault();
+    $checkboxes2.each(function() {
+        checkboxValues2[this.id] = this.checked;
+    });
+    localStorage.setItem("checkboxValues2", JSON.stringify(checkboxValues2));
+});
+
+
+$.each(checkboxValues, function(key, value) {
+    $("#" + key).prop('checked', value);
+});
+
+$.each(checkboxValues2, function(key, value) {
+    $("#" + key).prop('checked', value);
+});
+
+
+$cancel.on('click', function() {
+    localStorage.clear();
 });
