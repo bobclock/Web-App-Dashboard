@@ -345,6 +345,7 @@ $(document).ready(function() {
         e.preventDefault();
         $notifications_bell.attr('src', 'icons/icon-bell.svg');
         $notifications_txt.show();
+        $alert_div.hide();
     });
 
     $notifications_txt.on('click', function() {
