@@ -204,10 +204,10 @@ canvas {
 
 .traffic_button {
     border: none;
-    font-size: .75em;
+    font-size: .5em;
     box-shadow: none;
     border-radius: 10px;
-    width: 50px;
+    width: 40px;
     background-color: transparent;
     margin: 20px 5px;
     height: 30px;
@@ -438,7 +438,6 @@ td {
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
     height: 35px;
     margin: 10px 0 9px 0;
     background-image: url(../icons/down_arrow.png);
@@ -564,7 +563,7 @@ select {
     margin-left: 0;
 }
 .onoffswitch-checkbox:checked+ .onoffswitch-label .onoffswitch-switch {
-    right: 0px;
+    right: 0;
 }
 
 /*Bigger than portrait on phones*/
@@ -583,6 +582,10 @@ select {
         width: auto;
         margin: 10px 5px;
     }
+    .icon_holder:hover {
+      border-left: 4px solid #70c17c;
+    }
+
     /*MAIN CONTENT STYLES*/
     .main_content {
         width: 92.5%;
@@ -607,6 +610,10 @@ select {
     /*WIDGET STYLES */
     .social {
         width: 80%;
+    }
+    .traffic_button {
+        font-size: .75em;
+        width: 50px;
     }
 }
 
